@@ -40,37 +40,93 @@ This challenge will test your understanding of linking, structure, forms, tables
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Homepage Challenge</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navigation bar: Link to sections and other HTML files -->
+    
     <nav>
+        <!-- Navigation bar: Link to sections and other HTML files -->
+        <a href="./about.html">About Me</a>
+        <a href="./contact.html">Contact Me</a>
+        <a href="#about-section">About-section</a>
+        <a href="#contact1">Contact1</a>
+        <a href="#contact2">Contact2</a>
+        <hr>
         <!-- Example: <a href="#about">About Section</a> | <a href="#contact">Contact Section</a> | <a href="about.html">About Page</a> | <a href="contact.html">Contact Page</a> -->
     </nav>
     <hr>
     <!-- Main content area -->
-    <div class="main-content" id="main-content">
-        <!-- Section 1: About  add id call it about section -->
-        <section >
-            <!-- Your About content here -->
-        </section>
-        <!-- Section 2: add id call it  Contact  -->
-        <section >
-            <!-- Your Contact content here -->
-        </section>
-    </div>
-    <hr>
-    <!-- Embed another HTML file using iframe add a youtube video -->
-    <div class="iframe-area" id="iframe-area">
-        <!-- Example: <iframe src="about.html" width="400" height="200"></iframe> -->
-    </div>
-    <hr>
-    <!-- Small form with labels and inputs -->
-    <div class="form-area" id="form-area">
-        <!-- Example:
+    <main>
+        <div class="main-content" id="main-content">
+            <!-- Section 1: About  add id call it about section -->
+            <section id="about-section" style="width: 100%; background-color: lightblue;">
+                <h1>About Me</h1>
+                <p>Hello! I'm Abdalsalam Abakar Abdalkareem,<br> a web developer with a passion for creating beautiful
+                    <br>
+                    and functional websites. I have experience in HTML, CSS, and JavaScript,<br>
+                    and I love learning new technologies.</p>
+                <img src="./image/IMG_20250114_110259_018.jpg" alt="This is my image" width="300" height="300">
+                <h1>interests</h1>
+                <ol>
+                    <li>Hiking</li>
+                    <li>Photography</li>
+                    <li>Exploring new places</li>
+                    <li>Reading</li>
+                </ol><br><br>
+                <a href="#contact1">Navigate to Contact1</a>
+                <!-- Your About content here -->
+            </section>
+            <!-- Section 2: add id call it  Contact  -->
+            <section id="contact1" style="width: 100%; background-color: lightgreen;">
+                <!-- Your Contact content here -->
+                <h1>Contact</h1>
+                <p>If you have any questions, feel free to reach out!, yuo can contact me
+                    via email at abakarabdalsalam@gmail.com or phone at +250796562890.
+                    I'm always open to discussing new projects, collaborations, or opportunities to help you achieve
+                    your goals.
+                    Don't hesitate to get in touch!
+                </p>
+                <form action="">
+                    <label for="">Name:</label>
+                    <input type="text" name="name" id="name" required>
+                    <br><br>
+                    <label for="">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </form><br><br>
+                <table border="1" style=" border-collapse: collapse;">
+                    <tr>
+                        <th id="contact" style="width: 20%; height: 20px; background-color: blue;">Contact Method</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>abakarabdalsalam@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td>0796562890</td>
+                    </tr>
+                </table><br><br>
+                <a href="#contact2">Navigate to Contact2</a>
+            </section>
+        </div>
+        <hr>
+        <!-- Embed another HTML file using iframe add a youtube video -->
+        <div class="iframe-area" id="iframe-area">
+            <!-- Example: <iframe src="about.html" width="400" height="200"></iframe> -->
+             <iframe src="about.html" frameborder="5"></iframe>
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/X8OgKjwrc50?si=JVhAyEasYA8Nnbi7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <hr>
+        <!-- Small form with labels and inputs -->
+        <div class="form-area" id="form-area">
+            <!-- Example:
         <form>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name">
@@ -79,11 +135,18 @@ This challenge will test your understanding of linking, structure, forms, tables
             <input type="submit" value="Submit">
         </form>
         -->
-    </div>
-    <hr>
-    <!-- Table to display names but dont copy mine add more names and more rows atleast 3 rows and columns -->
-    <div class="table-area" id="table-area">
-        <!-- Example:
+        <form action="">
+            <label for="">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <br><br>
+            <label for="">Email:</label>
+            <input type="email" name="email" id="email" required>
+        </form><br><br>
+        </div>
+        <hr>
+        <!-- Table to display names but dont copy mine add more names and more rows atleast 3 rows and columns -->
+        <div class="table-area" id="table-area">
+            <!-- Example:
         <table>
             <tr><th>Name</th></tr>
             <tr><td>Alice</td></tr>
@@ -91,7 +154,36 @@ This challenge will test your understanding of linking, structure, forms, tables
             <tr><td>Charlie</td></tr>
         </table>
         -->
-    </div>
+        <table border="1" style=" border-collapse: collapse;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Abdalsalam Abakar Abdalkareem</td>
+                <td>28</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>28</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Emily Johnson</td>
+                <td>25</td>
+                <td>Chicago</td>
+            </tr>
+        </table>
+        </div>
+    </main>
     <!-- Add comments throughout your code explaining your choices! -->
 </body>
+
 </html>
